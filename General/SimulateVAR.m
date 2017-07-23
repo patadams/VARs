@@ -81,8 +81,10 @@ for t = t_init:T
     % Compute and store y_t.
     Y(t, :) = x' * B + Epsilon(t, :);
     % Create new x vector from old one.
-    x(2:(n * (p - 1) + 1)) = x((n + 1):(n * p + 1));
-    x((n * (p - 1) + 1):(n * p + 1)) = Y(t);
+    if p > 1
+        x(2:(n * (p - 1) + 1)) = x((n + 1):(n * p + 1));
+    end
+    x((n * (p - 1) + 2):(n * p + 1)) = Y(t, :);
 end
 
 end

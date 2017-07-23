@@ -70,7 +70,7 @@ if (dfPrior <= n - 1)
     error('Prior degrees of freedom must be > n - 1.')
 end
 
-% Create 'X' matrix of RHS variables
+% Create X matrix of RHS variables
 X = ones(T - p, k);
 for i = 1:p
     X(:, (2 + (i - 1) * n):(1 + i * n)) = Y((p + 1 - i):(T - i), :);

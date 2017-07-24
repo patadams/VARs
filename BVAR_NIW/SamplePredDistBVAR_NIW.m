@@ -1,4 +1,4 @@
-function Z = ForecastBVAR_NIW(BVAR_NIW, Yinit, H, num_draws)
+function Z = SimulatePredDistBVAR_NIW(BVAR_NIW, Yinit, H, num_draws)
 % Returns a sample of size num_draws and length H from the posterior
 % predictive distribution of a Bayesian Vector Autoregression (BVAR) with
 % a Normal-Inverse Wishart (NIW) prior, conditional on the p observations
